@@ -1,0 +1,268 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/andris9/xoauth2#readme">xoauth2 (v1.2.0)</a>
+</h1>
+<h4>XOAuth2 token generation for accessing GMail SMTP and IMAP</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xoauth2">module xoauth2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xoauth2.Gruntfile">
+            function <span class="apidocSignatureSpan">xoauth2.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xoauth2.createXOAuth2Generator">
+            function <span class="apidocSignatureSpan">xoauth2.</span>createXOAuth2Generator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xoauth2.Gruntfile">module xoauth2.Gruntfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xoauth2.Gruntfile.Gruntfile">
+            function <span class="apidocSignatureSpan">xoauth2.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xoauth2.createXOAuth2Generator">module xoauth2.createXOAuth2Generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xoauth2.createXOAuth2Generator.createXOAuth2Generator">
+            function <span class="apidocSignatureSpan">xoauth2.</span>createXOAuth2Generator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xoauth2" id="apidoc.module.xoauth2">module xoauth2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xoauth2.Gruntfile" id="apidoc.element.xoauth2.Gruntfile">
+        function <span class="apidocSignatureSpan">xoauth2.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+
+    // Project configuration.
+    grunt.initConfig({
+        jshint: {
+            all: ['src/*.js', 'test/*.js'],
+            options: {
+                jshintrc: '.jshintrc'
+            }
+        },
+
+        mochaTest: {
+            all: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['test/*-test.js']
+            }
+        }
+    });
+
+    // Load the plugin(s)
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-mocha-test');
+
+    // Tasks
+    grunt.registerTask('default', ['jshint', 'mochaTest']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xoauth2.createXOAuth2Generator" id="apidoc.element.xoauth2.createXOAuth2Generator">
+        function <span class="apidocSignatureSpan">xoauth2.</span>createXOAuth2Generator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createXOAuth2Generator = function (options) {
+    return new XOAuth2Generator(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  npm install xoauth2
+
+## Usage
+
+**xoauth2** generates XOAUTH2 login tokens from provided Client and User credentials.
+
+Use `xoauth2.<span class="apidocCodeKeywordSpan">createXOAuth2Generator</span>(options)` to initialize Token Generator
+
+Possible options values:
+
+* **user** _(Required)_ User e-mail address
+* **accessUrl** _(Optional)_ Endpoint for token generation (defaults to *https://accounts.google.com/o/oauth2/token*)
+* **clientId** _(Required)_ Client ID value
+* **clientSecret** _(Required)_ Client secret value
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xoauth2.Gruntfile" id="apidoc.module.xoauth2.Gruntfile">module xoauth2.Gruntfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xoauth2.Gruntfile.Gruntfile" id="apidoc.element.xoauth2.Gruntfile.Gruntfile">
+        function <span class="apidocSignatureSpan">xoauth2.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+
+    // Project configuration.
+    grunt.initConfig({
+        jshint: {
+            all: ['src/*.js', 'test/*.js'],
+            options: {
+                jshintrc: '.jshintrc'
+            }
+        },
+
+        mochaTest: {
+            all: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['test/*-test.js']
+            }
+        }
+    });
+
+    // Load the plugin(s)
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-mocha-test');
+
+    // Tasks
+    grunt.registerTask('default', ['jshint', 'mochaTest']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xoauth2.createXOAuth2Generator" id="apidoc.module.xoauth2.createXOAuth2Generator">module xoauth2.createXOAuth2Generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xoauth2.createXOAuth2Generator.createXOAuth2Generator" id="apidoc.element.xoauth2.createXOAuth2Generator.createXOAuth2Generator">
+        function <span class="apidocSignatureSpan">xoauth2.</span>createXOAuth2Generator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createXOAuth2Generator = function (options) {
+    return new XOAuth2Generator(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  npm install xoauth2
+
+## Usage
+
+**xoauth2** generates XOAUTH2 login tokens from provided Client and User credentials.
+
+Use `xoauth2.<span class="apidocCodeKeywordSpan">createXOAuth2Generator</span>(options)` to initialize Token Generator
+
+Possible options values:
+
+* **user** _(Required)_ User e-mail address
+* **accessUrl** _(Optional)_ Endpoint for token generation (defaults to *https://accounts.google.com/o/oauth2/token*)
+* **clientId** _(Required)_ Client ID value
+* **clientSecret** _(Required)_ Client secret value
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
