@@ -1,6 +1,6 @@
 # npmdoc-xoauth2
 
-#### api documentation for  [xoauth2 (v1.2.0)](https://github.com/andris9/xoauth2#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-xoauth2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xoauth2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xoauth2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xoauth2)
+#### basic api documentation for  [xoauth2 (v1.2.0)](https://github.com/andris9/xoauth2#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-xoauth2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xoauth2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xoauth2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xoauth2)
 
 #### XOAuth2 token generation for accessing GMail SMTP and IMAP
 
@@ -67,7 +67,8 @@
     "scripts": {
         "test": "grunt"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
